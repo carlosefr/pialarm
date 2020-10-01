@@ -23,18 +23,18 @@ log = logging.getLogger("pialarm")
 
 # Wait this number of seconds after arming before an input violation can
 # trigger the alarm, to give the user enough time to exit the premises.
-ARM_GRACE_PERIOD = 6
+ARM_GRACE_PERIOD = 60
 
 # Wait this number of seconds before an input violation triggers the alarm,
 # to give the user time to disarm it after entering the premises. The alarm
 # will always trigger if it's not disarmed before this period expires, even
 # if all inputs have resealed...
-ALARM_GRACE_PERIOD = 3
+ALARM_GRACE_PERIOD = 30
 
 # Once the alarm is triggered, it will remain active for this number of
 # seconds regardless of input state. Once this time elapses, the alarm
 # will be reset and rearm itself automatically (maybe triggering again).
-ALARM_DURATION = 9
+ALARM_DURATION = 900
 
 
 ALARM_SETTINGS = {
