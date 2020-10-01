@@ -1,0 +1,13 @@
+.DS_Store
+*.tmp
+*.un~
+*.swp
+*.bak
+*.pyc
+*.pyo
+*.log
+*~
+__pycache__
+.orig
+
+pialarm-venv
