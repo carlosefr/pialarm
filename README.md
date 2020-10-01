@@ -8,8 +8,8 @@ All **outputs** are assumed to (and must) be normally-closed, active-low, device
 
 All **inputs** are assumed to be normally-open by default, meaning they'll be interpreted as active when a connection to ground is detected (active-low). However, any of them can be set to normally-closed, meaning it will be interpreted as active when a connection to ground **isn't** detected.
 
-Configurable pin numbers range from 0 to `NUM_HARDWARE_PINS - 1` independently for both inputs and outputs. There is an aditional `VIRTUAL_INPUT_PIN` number used internally to track software-induced alarms (e.g. computer vision).
+Configurable **pin numbers** range from 0 to `NUM_HARDWARE_PINS - 1` independently for both inputs and outputs. There is an aditional `VIRTUAL_INPUT_PIN` number used internally to track software-induced alarms (e.g. computer vision).
 
-Using some kind of isolation circuitry to protect the hardware involved is recommended, see the `circuits/isolation.png` diagram for an example.
+Using some kind of **isolation circuitry** to protect the hardware is recommended, see the `circuits/isolation.png` diagram for an example.
 
-Please refer to the `pialarm` module's docstrings for the details and usage.
+Please refer to the `pialarm` module's docstrings for the **details and usage**.
