@@ -2,6 +2,10 @@
 
 The `pialarm` module implements a threaded alarm controller for off-the-shelf home security sensors and sirens connected to a [PiFace Digital](http://www.piface.org.uk/products/piface_digital/) add-on board for the [Raspberry Pi](https://www.raspberrypi.org/). It was written for fun and (electronics) learning purposes, don't expect production-ready code — it should work OK, but real-world testing was limited.
 
+Look at the top-level `alarm.py` program for how to use this in practice, and the `pialarm` module's docstrings for the details.
+
+![piface.png](https://raw.githubusercontent.com/carlosefr/pialarm/master/circuits/piface.png)
+
 The operation was tested with a discarded [Texecom Odyssey 5E](https://www.texe.com/uk/products/series/external-sounders/premier-series/) siren, whose inputs/outputs should be similar to models from other manufacturers. Just be careful about these things, they're **very loud** (100dB) and can [damage your ears](https://www.chem.purdue.edu/chemsafety/Training/PPETrain/dblevels.htm), especially if you let them go off indoors — I modified mine with an internal switch to easily disconnect it's piezo speaker.
 
 All **inputs** and **outputs** are **active-low**, meaning they're considered to be active when connected to ground. This makes it simpler to interface devices running at different voltages (_simpler_, not necessarily _direct_, read below).
@@ -19,5 +23,4 @@ The PiFace board can drive outputs whose active state is above 5V, but inputs mu
 
 In any case, having sufficient **electrical isolation** on both inputs and outputs is recommended. This is usually accomplished with an optocoupler chip (PC815 or 4N35 are the most common) and a few resistors. The `circuits/isolation.png` diagrams show what I'm using.
 
-
-Look at the top-level `alarm.py` program for how to use this in practice, and the `pialarm` module's docstrings for the details.
+![isolation.png](https://raw.githubusercontent.com/carlosefr/pialarm/master/circuits/isolation.png)
