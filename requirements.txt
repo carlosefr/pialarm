@@ -1,0 +1,2 @@
+pifacecommon==4.2.*
+pifacedigitalio==3.0.*
